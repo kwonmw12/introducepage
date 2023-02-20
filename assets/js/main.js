@@ -209,45 +209,19 @@
     speed: 1000,
     loop: true,
     autoplay: {
-      delay: 711000,
+      delay: 5000,
       disableOnInteraction: false
     },
-    slidesPerView: 'auto',
+    
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5111000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
+      el: '.portfolio .swiper-pagination',
       type: 'bullets',
       clickable: true
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
+    paginationClickable: true,
+    autoplayDisableOnInteraction: true,
   });
+
 
   /**
    * Initiate gallery lightbox 
@@ -267,5 +241,18 @@
       mirror: false
     })
   });
+
+  new Swiper(".mainswiper", {
+    spaceBetween: 30,
+    effect: "fade",
+    speed : 3000,
+    autoplay : {
+          //시간 1000 이 1초
+          delay : 5000,
+          disableOnInteraction : false,
+      },
+    
+  });
+
 
 })()

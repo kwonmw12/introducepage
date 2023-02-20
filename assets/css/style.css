@@ -420,28 +420,97 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # 메인배너 섹션
 --------------------------------------------------------------*/
-#mainbanner {
+#mainbanner{
   width: 100%;
   height: 100vh;
-  background: url("../img/mainbanner-bg.jpg") top center;
+  background: url("../img/mainbanner-bg.jpg");
   background-size: cover;
+  background-position: center center;
   position: relative;
   padding: 0;
 }
 
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
 #mainbanner:before {
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
 }
-
-#mainbanner .container {
-  padding-top: 110px;
+.swiper .mainswiper{
+  width: 100%;
 }
+
+/* 연혁 섹션 */
+.timeline {
+  width: 90%;
+  height: 450px;
+  overflow: scroll;
+}
+.timeline p{
+  font-weight: 500;
+  color: white;
+}
+
+.timeline-item{
+  color: red;
+}
+
+.box{
+  -ms-overflow-style: none;
+}
+.box::-webkit-scrollbar{
+  display:none;
+}
+
+.timeline-item {
+  margin-left: 1rem;
+  padding: 3em 2em 2em;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item::before {
+  content: attr(date-is);
+  position: absolute;
+  left: 1em;
+  font-weight: bold;
+  top: -0.1em;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #cda45e;
+}
+.timeline-item::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
+  position: absolute;
+  left: -6px;
+  border-radius: 10px;
+  content: "";
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: #cda45e;
+}
+.timeline-item:last-child {
+  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.timeline-item p {
+  margin-bottom: 0;
+}
+
 
 @media (max-width: 992px) {
   #mainbanner .container {
@@ -452,10 +521,11 @@ h1, h2, h3, h4, h5, h6 {
 #mainbanner h1 {
   margin: 0;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 100;
   line-height: 56px;
   color: #fff;
   font-family: "Poppins", sans-serif;
+  letter-spacing: -0.231rem;
 }
 
 #mainbanner h1 span {
@@ -808,7 +878,7 @@ section {
 }
 
 @media (max-width: 767px) {
-  #introduce .section-title p{
+  .introduce .section-title p{
     font-size: 1.7rem;
   }
 }
@@ -906,7 +976,7 @@ section {
 }
 
 @media (max-width: 767px) {
-  #skill .section-title p{
+  .skill .section-title p{
     font-size: 1.7rem;
   }
 }
@@ -973,13 +1043,13 @@ section {
     border: 0;
     padding: 15px;
   }
-  #interview .tab-content div img{
+  .interview .tab-content div img{
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  #interview .section-title p{
+  .interview .section-title p{
     font-size: 1.7rem;
   }
 }
@@ -988,7 +1058,7 @@ section {
 # 포트폴리오
 --------------------------------------------------------------*/
 .portfolio {
-  background: url(../img/portfolio-bg.jpg) center center no-repeat;
+  background: url(/assets/img/portfolio-bg.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1001,10 +1071,6 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
-}
-
-.portfolio .section-title h2 {
-  color: #fff;
 }
 
 .portfolio .container {
@@ -1026,7 +1092,7 @@ section {
   color: #cda45e;
 }
 
-.portfolio .event-item .price {
+.portfolio .event-item .hashtag {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -1069,16 +1135,25 @@ section {
   background-color: #cda45e;
 }
 
+.portfolio .content img{
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
 @media (min-width: 1024px) {
   .portfolio {
     background-attachment: fixed;
   }
 }
 @media (max-width: 767px) {
-  #portfolio .section-title p{
+  .portfolio .section-title p{
     font-size: 1.7rem;
   }
+  .portfolio .content {
+    padding-left: none;
+  }
 }
+
 
 
 /*--------------------------------------------------------------
@@ -1099,7 +1174,7 @@ section {
 }
 
 @media (max-width: 767px) {
-  #activity .section-title p{
+  .activity .section-title p{
     font-size: 1.7rem;
   }
 }
@@ -1190,13 +1265,13 @@ section {
 }
 
 @media (max-width: 767px) {
-  #photograph .section-title p{
+  .photograph .section-title p{
     font-size: 1.7rem;
   }
 }
 
 /*--------------------------------------------------------------
-# Contact
+# 컨텍
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
@@ -1352,7 +1427,7 @@ section {
 }
 
 @media (max-width: 767px) {
-  #contact .section-title p{
+  .contact .section-title p{
     font-size: 1.7rem;
   }
 }
@@ -1510,221 +1585,9 @@ section {
 }
 
 
-.timeline .swiper-container {
-  height: 600px;
-  width: 100vw;
-}
-.timeline .swiper-wrapper {
-  transition: 0.5s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
-}
-.timeline .swiper-slide {
-  position: relative;
-  color: #fff;
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
-.timeline .swiper-slide-content {
-  position: absolute;
-  text-align: center;
-  width: 80%;
-  max-width: 310px;
-  left: 50%;
-  top: 13%;
-  -webkit-transform: translate(50%, 0);
-          transform: translate(50%, 0);
-  font-size: 12px;
-  z-index: 2;
-}
-.timeline .swiper-slide .timeline-year {
-  display: block;
-  font-style: italic;
-  font-size: 42px;
-  margin-bottom: 50px;
-  -webkit-transform: translate3d(20px, 0, 0);
-          transform: translate3d(20px, 0, 0);
-  color: #d4a024;
-  font-weight: 300;
-  opacity: 0;
-  transition: 0.2s ease 0.4s;
-}
-.timeline .swiper-slide .timeline-title {
-  font-weight: 800;
-  font-size: 34px;
-  margin: 0 0 30px;
-  opacity: 0;
-  -webkit-transform: translate3d(20px, 0, 0);
-          transform: translate3d(20px, 0, 0);
-  transition: 0.2s ease 0.5s;
-}
-.timeline .swiper-slide .timeline-text {
-  line-height: 1.5;
-  opacity: 0;
-  -webkit-transform: translate3d(20px, 0, 0);
-          transform: translate3d(20px, 0, 0);
-  transition: 0.2s ease 1s;
-}
-.timeline .swiper-slide-active .timeline-year {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  transition: 0.4s ease 1.1s;
-}
-.timeline .swiper-slide-active .timeline-title {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  transition: 0.4s ease 1.2s;
-}
-.timeline .swiper-slide-active .timeline-text {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  transition: 0.4s ease 1.3s;
-}
-.timeline .swiper-pagination {
-  left: 15% ;
-  height: 100%;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 18px;
-  z-index: 1;
-}
-.timeline .swiper-pagination::before {
-  content: "";
-  position: absolute;
-  left: 103px;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.timeline .swiper-pagination-bullet {
-  width: auto;
-  height: auto;
-  text-align: center;
-  opacity: 1;
-  background: transparent;
-  color: #d4a024;
-  margin: 15px 0 !important;
-  position: relative;
-}
-.timeline .swiper-pagination-bullet::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 100px;
-  width: 6px;
-  height: 6px;
-  border-radius: 100%;
-  background-color: #d4a024;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  transition: 0.2s;
-}
-.timeline .swiper-pagination-bullet-active {
-  color: #d4a024;
-}
-.timeline .swiper-pagination-bullet-active::before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.timeline .swiper-button-next,
-.timeline .swiper-button-prev {
-  background-size: 20px 20px;
-  top: 15%;
-  width: 20px;
-  height: 20px;
-  margin-top: 0;
-  z-index: 2;
-  transition: 0.2s;
-}
-.timeline .swiper-button-prev {
-  left: 8%;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
-}
-.timeline .swiper-button-prev:hover {
-  -webkit-transform: translateX(-3px);
-          transform: translateX(-3px);
-}
-.timeline .swiper-button-next {
-  left: 8%;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
-}
-.timeline .swiper-button-next:hover {
-  -webkit-transform: translateX(3px);
-          transform: translateX(3px);
-}
-@media screen and (min-width: 768px) {
-  .timeline .swiper-slide::after {
-    left: -30%;
-    bottom: -8%;
-    width: 240px;
-    height: 50%;
-    box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
-  }
-  .timeline .swiper-slide-content {
-    left: 20rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 310px;
-    font-size: 11px;
-    text-align: left;
-  }
-  .timeline .swiper-slide .timeline-year {
-    margin-bottom: 0;
-    font-size: 32px;
-  }
-  .timeline .swiper-slide .timeline-title {
-    font-size: 46px;
-    margin: 0;
-  }
-  .timeline .swiper-pagination {
-    display: flex;
-  }
-  .timeline .swiper-button-prev {
-    top: 4rem;
-    left: auto;
-    left: 15%;
-    -webkit-transform: rotate(90deg) translate(0, 10px);
-            transform: rotate(90deg) translate(0, 10px);
-  }
-  .timeline .swiper-button-prev:hover {
-    -webkit-transform: rotate(90deg) translate(-3px, 10px);
-            transform: rotate(90deg) translate(-3px, 10px);
-  }
-  .timeline .swiper-button-next {
-    top: auto;
-    bottom: 4rem;
-    left: 15%;
-    -webkit-transform: rotate(90deg) translate(0, 10px);
-            transform: rotate(90deg) translate(0, 10px);
-  }
-  .timeline .swiper-button-next:hover {
-    -webkit-transform: rotate(90deg) translate(3px, 10px);
-            transform: rotate(90deg) translate(3px, 10px);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .timeline .swiper-slide::after {
-    left: -20%;
-    bottom: -12%;
-    width: 240px;
-    height: 50%;
-    box-shadow: -230px 0 150px 39vw rgba(0, 0, 0, 0.7);
-  }
-  .timeline .swiper-slide-content {
-    left: 30rem;
-  }
-}
 
-.swiper-wrapper .swiper-slide-content p{
-  font-size: 1rem;
-  color: black;
-}
+
+
+/* test */
+
