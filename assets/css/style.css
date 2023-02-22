@@ -430,6 +430,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+#mainbanner h1{
+  margin-top: 10%;
+}
+
 .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -662,6 +666,8 @@ h1, h2, h3, h4, h5, h6 {
   #mainbanner h1 {
     font-size: 28px;
     line-height: 36px;
+    margin-top: 50%;
+    margin-bottom: -10%;
   }
   #mainbanner h2 {
     font-size: 18px;
@@ -918,6 +924,7 @@ section {
 
 .skill .skill-item {
   margin-top: 50px;
+  position: relative;
 }
 
 .skill .skill-img {
@@ -944,12 +951,20 @@ section {
   z-index: 1;
   color: #bab3a6;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  width: 500px;
+  width: 100%;
   height: 2px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
   margin: 11px 10px;
+}
 
+
+.skill .skill-value{
+  position: absolute;
+  height: 2px;
+  background-color: red;
+  margin: 11px 10px;
+  max-width: 440px;
 }
 
 .skill .skill-content a {
@@ -1138,6 +1153,50 @@ section {
 .portfolio .content img{
   padding-right: 1rem;
   padding-top: 1rem;
+}
+
+.portfolio .stack-box{
+  width: 450px;
+}
+.portfolio .stack-bar{
+  position: relative;
+  margin-top: 2rem;
+  height: 5px;
+  width: 100%;
+  background-color: gray;
+  
+}
+.portfolio .stack-value-html{
+  height: 5px;
+  width: 30%;
+  background-color: #e34c26;
+  z-index: 12;
+  position: absolute;
+}
+
+.portfolio .stack-value-css{
+  height: 5px;
+  width: 60%;
+  background-color: #563d7c;
+  z-index: 11;
+  position: absolute;
+}
+
+.portfolio .stack-value-js{
+  height: 5px;
+  width: 100%;
+  background-color: #f1e05a;
+  position: absolute;
+}
+
+.portfolio .stack-html-mark i{
+  color: #e34c26 !important; 
+}
+.portfolio .stack-css-mark i{
+  color: #563d7c !important; 
+}
+.portfolio .stack-js-mark i{
+  color: #f1e05a !important; 
 }
 
 @media (min-width: 1024px) {
