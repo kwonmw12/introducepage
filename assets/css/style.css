@@ -18,7 +18,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
@@ -105,6 +105,10 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
   opacity: 1;
 }
+
+/* 퀵메뉴 */
+
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -424,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
 #mainbanner{
   width: 100%;
   height: 100vh;
-  background: url("../img/main-desk-bg.jpg");
+  background: url("//drive.google.com/uc?export=view&id=1Gb4m34rDFJyJq3_KmjQQ44WdvRkdNql8");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -449,9 +453,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
 }
+
 .swiper .mainswiper{
   width: 100%;
 }
+
+
 
 /* 연혁 섹션 */
 .timeline {
@@ -756,7 +763,7 @@ section {
 # 어바웃 섹션
 --------------------------------------------------------------*/
 .about {
-  background: url("../img/about-bg.jpg") center top;
+  background: url("//drive.google.com/uc?export=view&id=1Y9fvo7TDWxWhBXMbCBEX9S_PoFdxNFI8") center top;
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -860,37 +867,73 @@ section {
 /*--------------------------------------------------------------
 # 인트로듀스 섹션
 --------------------------------------------------------------*/
+.introduce .box-1 {
+  background: url("//drive.google.com/uc?export=view&id=13_v2-9vMsAeTJrRVPlxmvWu7OuINQMjR");
+  background-position: center center;
+  background-size: cover;
+}
+
+.introduce .box-2 {
+  background: url("//drive.google.com/uc?export=view&id=161GTsTkp3opNwFqvkLqy4lR_56HgRDUB");
+  background-position: center center;
+  background-size: cover;
+}
+
+.introduce .box-3 {
+  background: url("//drive.google.com/uc?export=view&id=1WVZR-IMz3zyoB9JkOaXlcQwSeZkMx27H");
+  background-position: center right;
+  background-size: cover;
+}
+
 .introduce .box {
-  padding: 50px 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
-  background: #1a1814;
   height: 300px;
 }
 
-.introduce .box span {
-  display: block;
-  font-size: 28px;
-  font-weight: 700;
-  color: #cda45e;
+.introduce .box .box-info {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
 }
 
-.introduce .box p {
-  color: #aaaaaa;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
+.introduce .box .box-info-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
 }
 
-.introduce .box:hover {
-  background: #cda45e;
-  padding: 30px 30px 70px 30px;
-  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
-}
-
-.introduce .box:hover span, .introduce .box:hover h4, .introduce .box:hover p {
+.introduce .box h4 {
+  margin-bottom: 2px;
+  font-size: 24px;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+.introduce .box:hover .box-info {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.introduce .box:hover .box-info-content {
+  bottom: 60px;
+  transition: bottom 0.4s;
+}
+
 
 @media (max-width: 767px) {
   .introduce .section-title p{
@@ -1107,7 +1150,7 @@ section {
 # 포트폴리오
 --------------------------------------------------------------*/
 .portfolio {
-  background: url(/assets/img/portfolio-bg.jpg) center center no-repeat;
+  background: url("//drive.google.com/uc?export=view&id=13_v2-9vMsAeTJrRVPlxmvWu7OuINQMjR") center center no-repeat;
   background-size: cover;
   position: relative;
 }
