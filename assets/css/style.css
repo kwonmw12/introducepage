@@ -1130,6 +1130,10 @@ section {
   margin-bottom: 0;
 }
 
+.interview .tab-content img{
+  width: 75%;
+}
+
 @media (max-width: 992px) {
   .interview .nav-link {
     border: 0;
@@ -1230,6 +1234,14 @@ section {
 .portfolio .content img{
   padding-right: 1rem;
   padding-top: 1rem;
+}
+
+.portfolio .viewbutton a{
+  padding: 10px 38px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid gray;
+    margin-right: 30px;
+    font-size: 1rem;
 }
 
 .portfolio .stack-box{
