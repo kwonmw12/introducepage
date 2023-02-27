@@ -583,12 +583,13 @@ h1, h2, h3, h5, h6 {
   margin-left: 15px;
 }
 
+/* 메인배너 플레이버튼 */
 #mainbanner .play-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
   border-radius: 50%;
-  display: block;
+  display: none;
   position: relative;
   overflow: hidden;
 }
@@ -653,6 +654,7 @@ h1, h2, h3, h5, h6 {
   animation: none;
   border-radius: 0;
 }
+
 
 @media (min-width: 1024px) {
   #mainbanner {
@@ -1159,6 +1161,11 @@ section {
   position: relative;
 }
 
+.portfolio .port-img-box{
+  max-height: 40em;
+  overflow: hidden;
+}
+
 .portfolio::before {
   content: '';
   background-color: rgba(0, 0, 0, 0.8);
@@ -1237,10 +1244,10 @@ section {
 }
 
 .portfolio .viewbutton a{
-  padding: 10px 38px;
+  padding: 0.5rem 1.7rem;
     background-color: rgba(0,0,0,0);
     border: 1px solid gray;
-    margin-right: 30px;
+    margin-right: 0.5rem;
     font-size: 1rem;
 }
 
@@ -1255,23 +1262,46 @@ section {
   background-color: gray;
   
 }
-.portfolio .stack-value-html{
+.portfolio .stack1-value-html{
   height: 5px;
-  width: 30%;
+  width: 7.1%;
   background-color: #e34c26;
   z-index: 12;
   position: absolute;
 }
 
-.portfolio .stack-value-css{
+.portfolio .stack1-value-css{
   height: 5px;
-  width: 60%;
-  background-color: #563d7c;
+  width: 17.1%;
+  background-color: #c6538c;
   z-index: 11;
   position: absolute;
 }
 
-.portfolio .stack-value-js{
+.portfolio .stack1-value-js{
+  height: 5px;
+  width: 100%;
+  background-color: #f1e05a;
+  position: absolute;
+}
+
+.portfolio .stack2-value-html{
+  height: 5px;
+  width: 7.1%;
+  background-color: #e34c26;
+  z-index: 12;
+  position: absolute;
+}
+
+.portfolio .stack2-value-css{
+  height: 5px;
+  width: 17.1%;
+  background-color: #c6538c;
+  z-index: 11;
+  position: absolute;
+}
+
+.portfolio .stack2-value-js{
   height: 5px;
   width: 100%;
   background-color: #f1e05a;
@@ -1284,6 +1314,10 @@ section {
 .portfolio .stack-css-mark i{
   color: #563d7c !important; 
 }
+.portfolio .stack-scss-mark i{
+  color: #c6538c !important;
+}
+
 .portfolio .stack-js-mark i{
   color: #f1e05a !important; 
 }
@@ -1303,7 +1337,12 @@ section {
 }
 
 @media (max-width: 540px) {
-  
+  .portfolio .stack-bar{
+    width: 100%;
+  }
+  .portfolio .section-title p{
+    font-size: 1.2rem;
+  }
 }
 
 
