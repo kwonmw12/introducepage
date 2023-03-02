@@ -72,32 +72,70 @@ h1, h2, h3, h5, h6 {
 /*--------------------------------------------------------------
 # 탑버튼
 --------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
+.back-to-top{
+  width: 44px;
+  height: 44px;
   right: 15px;
   bottom: 15px;
   z-index: 996;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s;
+}
+.back-to-top1 {
+  margin-top: 5px;
   width: 44px;
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
   border: 2px solid #cda45e;
 }
-
+.instabtn {
+  position: fixed;
+  right: 15px;
+  bottom: 4rem;
+  z-index: 996;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.kakaobtn {
+  position: fixed;
+  right: 15px;
+  bottom: 7.5rem;
+  z-index: 996;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
 .back-to-top i {
   font-size: 28px;
   color: #cda45e;
   line-height: 0;
 }
+.instabtn img {
+  width: 54px;
+  height: 54px;
+  font-size: 28px;
+  line-height: 0;
+}
 
-.back-to-top:hover {
+.kakaobtn img {
+  width: 44px;
+  height: 44px;
+  font-size: 28px;
+  line-height: 0;
+}
+
+.back-to-top1:hover {
   background: #cda45e;
   color: #1a1814;
 }
 
-.back-to-top:hover i {
+.back-to-topbtn:hover i {
   color: #444444;
 }
 
@@ -717,7 +755,7 @@ h1, h2, h3, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 5rem 0;
   overflow: hidden;
 }
 
@@ -754,7 +792,6 @@ section {
   margin: 0;
   margin: 0;
   font-size: 36px;
-  font-weight: 700;
   font-family: "Playfair Display", serif;
   color: #cda45e;
 }
@@ -835,8 +872,9 @@ section {
 }
 
 .about .content h3 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 26px;
+  font-family: "Open Sans";
 }
 
 .about .content ul {
@@ -846,6 +884,9 @@ section {
 
 .about .content ul li {
   padding-bottom: 10px;
+}
+.about .about-title{
+  color: #cda45e;
 }
 
 .about .content ul i {
@@ -1032,7 +1073,6 @@ section {
   background: #1a1814;
   position: relative;
   z-index: 3;
-  font-weight: 700;
   color: white;
   transition: 0.3s;
 }
@@ -1190,7 +1230,6 @@ section {
 }
 
 .portfolio .event-item h3 {
-  font-weight: 600;
   font-size: 26px;
   color: #cda45e;
 }
@@ -1198,7 +1237,6 @@ section {
 .portfolio .event-item .hashtag {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
   margin-bottom: 15px;
   
 }
@@ -1213,7 +1251,6 @@ section {
 }
 
 .portfolio .event-item ul i {
-  font-size: 20px;
   padding-right: 4px;
   color: #cda45e;
 }
@@ -1223,7 +1260,7 @@ section {
 }
 
 .portfolio .swiper-pagination {
-  margin-top: 30px;
+  margin-top: 3rem;
   position: relative;
 }
 
@@ -1240,7 +1277,7 @@ section {
 
 .portfolio .content img{
   padding-right: 1rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .portfolio .viewbutton a{
@@ -1256,7 +1293,7 @@ section {
 }
 .portfolio .stack-bar{
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   height: 5px;
   width: 75%;
   background-color: gray;
@@ -1287,7 +1324,7 @@ section {
 
 .portfolio .stack2-value-html{
   height: 5px;
-  width: 7.1%;
+  width: 62.7%;
   background-color: #e34c26;
   z-index: 12;
   position: absolute;
@@ -1295,8 +1332,8 @@ section {
 
 .portfolio .stack2-value-css{
   height: 5px;
-  width: 17.1%;
-  background-color: #c6538c;
+  width: 93.1%;
+  background-color: #563d7c;
   z-index: 11;
   position: absolute;
 }
@@ -1307,6 +1344,8 @@ section {
   background-color: #f1e05a;
   position: absolute;
 }
+
+
 
 .portfolio .stack-html-mark i{
   color: #e34c26 !important;
@@ -1400,7 +1439,6 @@ section {
 }
 
 .photograph .member .member-info-content h4 {
-  font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
   color: #fff;

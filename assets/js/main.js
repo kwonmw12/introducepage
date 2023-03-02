@@ -98,7 +98,7 @@
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 2000) {
         backtotop.classList.add('active')
       } else {
         backtotop.classList.remove('active')
@@ -208,10 +208,10 @@
   new Swiper('.portfolio-slider', {
     speed: 1000,
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //   delay: 8000,
+    //   disableOnInteraction: false
+    // },
     
     pagination: {
       el: '.portfolio .swiper-pagination',
