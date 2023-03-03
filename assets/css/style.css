@@ -1023,72 +1023,128 @@ section {
   margin-right: 0;
 }
 
-.skill .skill-item {
-  margin-top: 50px;
-  position: relative;
-}
-
-.skill .skill-img {
+.skill .skill-img-box {
   width: 70px;
+  height: 70px;
   border-radius: 50%;
-  float: left;
   border: 5px solid rgba(255, 255, 255, 0.2);
 }
-
-.skill .skill-content {
-  margin-left: 85px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-top: 20px;
-}
-
-.skill .skill-content::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  right: 0;
-  z-index: 1;
-  color: #bab3a6;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.skill .skill-img{
   width: 100%;
-  height: 2px;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 11px 10px;
+  height: 100%;
+  background-position: center;
+  position: cover;
+  border-radius: 50%;
+}
+.skill .skill-img-html{
+  background-image: url("/assets/img/skills/html.jpg");
+}
+.skill .skill-img-node{
+  background-image: url("/assets/img/skills/node.jpg");
+}
+.skill .skill-img-js{
+  background-image: url("/assets/img/skills/js.jpg");
+}
+.skill .skill-img-figma{
+  background-image: url("/assets/img/skills/figma.jpg");
+}
+.skill .skill-img-jq{
+  background-image: url("/assets/img/skills/jquery.jpg");
+}
+.skill .skill-img-ps{
+  background-image: url("/assets/img/skills/photoillu.jpg");
+}
+.skill .skill-img-react{
+  background-image: url("/assets/img/skills/react.jpg");
+}
+.skill .skill-img-lr{
+  background-image: url("/assets/img/skills/lightroom.jpg");
+}
+.skill .skill-img-boot{
+  background-image: url("/assets/img/skills/boot.jpg");
 }
 
+
+.skill .skill-bar{
+  width: 24rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
 
 .skill .skill-value{
-  position: absolute;
+  width: 10%;
   height: 2px;
   background-color: red;
-  margin: 11px 10px;
-  max-width: 440px;
 }
 
-.skill .skill-content a {
-  padding-right: 10px;
-  background: #1a1814;
-  position: relative;
-  z-index: 3;
-  color: white;
-  transition: 0.3s;
+.skill .skill-per, .skill-content{
+  padding: 1rem;
 }
-
-.skill .skill-content a:hover {
+.skill .skill-per {
   color: #cda45e;
 }
 
-.skill .skill-content span {
-  background: #1a1814;
-  position: relative;
-  z-index: 3;
-  padding: 0 10px;
-  font-weight: 600;
-  color: #cda45e;
+.skill .skill-content{
+  width: 8rem;
+  text-align: center;
 }
+
+.skill .skill-value-html{
+  width: 80%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-node{
+  width: 50%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-html{
+  width: 80%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-js{
+  width: 50%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-figma{
+  width: 80%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-html{
+  width: 80%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-jq{
+  width: 80%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-ps{
+  width: 70%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-react{
+  width: 70%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-lr{
+  width: 90%;
+  height: 2px;
+  background-color: #e34c26;
+}
+.skill .skill-value-boot{
+  width: 80%;
+  height: 2px;
+  background-color: #e34c26;
+}
+
 
 @media (max-width: 767px) {
   .skill .section-title p{
@@ -1103,16 +1159,17 @@ section {
   .skill .skill-img{
     width: 60px;
   }
-  .skill .skill-container{
-    width: 320px;
+  .skill .skill-bar{
     margin-left: 1rem;
   }
-  .skill .skill-content::after{
+  
+  .skill .skill-content{
     display: none;
   }
-  .skill .skill-value{
-    display: none;
-  }
+}
+
+@media (max-width: 340px){
+
 }
 
 
@@ -1281,7 +1338,7 @@ section {
 }
 
 .portfolio .viewbutton a{
-  padding: 0.5rem 1.7rem;
+  padding: 0.5rem 1.2rem;
     background-color: rgba(0,0,0,0);
     border: 1px solid gray;
     margin-right: 0.5rem;
@@ -1445,7 +1502,6 @@ section {
 }
 
 .photograph .member .member-info-content span {
-  font-style: italic;
   display: block;
   font-size: 13px;
   color: #fff;

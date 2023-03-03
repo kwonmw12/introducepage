@@ -1,5 +1,5 @@
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -93,7 +93,7 @@
   }
 
   /**
-   * Back to top button
+   * 탑버튼 스크롤시 나타남
    */
   let backtotop = select('.back-to-top')
   if (backtotop) {
@@ -111,7 +111,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -120,7 +120,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -130,7 +130,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -177,9 +177,9 @@
 
       let skillFilters = select('#skill-flters li', true);
 
-      on('click', '#skill-flters li', function(e) {
+      on('click', '#skill-flters li', function (e) {
         e.preventDefault();
-        skillFilters.forEach(function(el) {
+        skillFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -187,7 +187,7 @@
         skillIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        skillIsotope.on('arrangeComplete', function() {
+        skillIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -212,7 +212,7 @@
     //   delay: 8000,
     //   disableOnInteraction: false
     // },
-    
+
     pagination: {
       el: '.portfolio .swiper-pagination',
       type: 'bullets',
@@ -245,13 +245,12 @@
   new Swiper(".mainswiper", {
     spaceBetween: 30,
     effect: "fade",
-    speed : 3000,
-    autoplay : {
-          //시간 1000 이 1초
-          delay : 5000,
-          disableOnInteraction : false,
-      },
-    
+    speed: 3000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
   });
 
 

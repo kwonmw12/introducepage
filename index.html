@@ -37,9 +37,8 @@
 
   <!-- ======= 탑바 ======= -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-
-      <div class="languages d-none d-md-flex align-items-center">
+    <div class="container d-flex justify-content-md-between">
+      <div class="languages d-md-flex align-items-center">
         <ul>
           <li>Ko</li>
           <li><a href="jpver.html">Jp</a></li>
@@ -76,7 +75,6 @@
 
   <!-- ======= 메인배너 섹션 ======= -->
   <section id="mainbanner" class="d-flex align-items-center">
-
     <div class="container position-relative text-start" data-aos="fade-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
@@ -135,10 +133,8 @@
       </div>
     </div>
   </section>
-
+<!-- ======= 어바웃 섹션 ======= -->
   <main id="main">
-
-    <!-- ======= 어바웃 섹션 ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
@@ -154,13 +150,22 @@
             <span class="d-block">이 포트폴리오에서는 프론트 엔드 개발자를 꿈꾸며 준비한<br>
               제 땀과 노력의 결과인 작업물들을 보실 수 있습니다.</span>
             <ul class="mt-4">
-              <li><i class="bi bi-check-circle"></i>MBTI는 'ENFJ' <p> 대화가 잘 통하고 헌신적입니다. 이러한 성격을 바탕으로 직무에 있어서 목표를 달성할 수
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span> MBTI는 'ENFJ'</span>
+                <p> 대화가 잘 통하고 헌신적입니다. 이러한 성격을 바탕으로 직무에 있어서 목표를 달성할 수
                   있도록 도와주는 서포트의 역할을 잘 할수 있습니다. </p>
               </li>
-              <li><i class="bi bi-check-circle"></i>다양한 경험의 소유자<p>일본에서 10년간 유학생활과 직장 생활을 하였고 그외에도 다양한 경험을 하였습니다. 이것을
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span> 다양한 경험의 소유자</span>
+                <p>일본에서 10년간 유학생활과 직장 생활을 하였고 그외에도 다양한 경험을 하였습니다. 이것을
                   바탕으로 빠른 적응력과 커뮤니케이션 능력을 통해 업무에 적응해 가겠습니다.</p>
               </li>
-              <li><i class="bi bi-check-circle"></i>꾸준한 성장<p>지적 호기심이 많아 다방면의 분야에 관심이 많습니다. 하나에 그치지 않고 더 나아가 많은것을 배우며 그것을
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span> 꾸준한 성장</span>
+                <p>지적 호기심이 많아 다방면의 분야에 관심이 많습니다. 하나에 그치지 않고 더 나아가 많은것을 배우며 그것을
                   업무에 반영시킴으로 혁신적인 솔루션을 제공 하고 싶습니다.</p>
               </li>
             </ul>
@@ -215,7 +220,6 @@
     <!-- ======= 스킬 섹션 ======= -->
     <section id="skill" class="skill section-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Skills</h2>
           <p>사용가능한 프로그램</p>
@@ -232,94 +236,132 @@
         </div>
 
         <div class="row skill-container" data-aos="fade-up" data-aos-delay="200">
-
           <div class="col-lg-6 skill-item filter-frontend">
-            <img src="assets/img/skills/html.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">HTML / CSS</a>
-              <div class="skill-value" style="width: calc(80% - 48px)"></div>
-              <span>80%</span>
-
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-html img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              HTML / CSS
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-html"></div>
+              </div>
+              <span class="skill-per">80%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-frontend">
-            <img src="assets/img/skills/node.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">Node</a>
-              <div class="skill-value" style="width: calc(50%)"></div>
-              <span>50%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-node img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              Node
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-node"></div>
+              </div>
+              <span class="skill-per">50%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-frontend">
-            <img src="assets/img/skills/js.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">Javascript</a>
-              <div class="skill-value" style="width: calc(60%)"></div>
-              <span>60%</span>
-            </div>
-            <div class="skill-ingredients">
-
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-js img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              Javascript
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-js"></div>
+              </div>
+              <span class="skill-per">50%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-graphics">
-            <img src="assets/img/skills/figma.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">Figma</a>
-              <div class="skill-value" style="width: calc(70% - 24px)"></div>
-              <span>70%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-figma img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              Figma
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-figma"></div>
+              </div>
+              <span class="skill-per">80%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-frontend">
-            <img src="assets/img/skills/jquery.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">JQuery</a>
-              <div class="skill-value" style="width: calc(70% - 24px)"></div>
-              <span>70%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-jq img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              JQuery
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-jq"></div>
+              </div>
+              <span class="skill-per">80%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-graphics">
-            <img src="assets/img/skills/photoillu.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">Photoshop /<br>illustrator</a>
-              <div class="skill-value" style="width: calc(70% - 24px)"></div>
-              <span>70%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-ps img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              Photoshop / illustrator
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-ps"></div>
+              </div>
+              <span class="skill-per">70%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-frontend">
-            <img src="assets/img/skills/react.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">React</a>
-              <div class="skill-value" style="width: calc(60%)"></div>
-              <span>60%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-react img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              React
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-react"></div>
+              </div>
+              <span class="skill-per">70%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-graphics">
-            <img src="assets/img/skills/lightroom.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">Lightroom</a>
-              <div class="skill-value" style="width: calc(90% - 10%)"></div>
-              <span>90%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-lr img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              Lightroom
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-lr"></div>
+              </div>
+              <span class="skill-per">90%</span>
             </div>
           </div>
-
           <div class="col-lg-6 skill-item filter-frontend">
-            <img src="assets/img/skills/boot.jpg" class="skill-img" alt="">
-            <div class="skill-content">
-              <a href="#">Bootstrap</a>
-              <div class="skill-value" style="width: calc(70% - 24px)"></div>
-              <span>70%</span>
+            <div class="d-flex mt-5 justify-content-between align-items-center">
+              <div class="skill-img-box">
+                <div class="skill-img skill-img-boot img-fluid"></div>
+              </div>
+              <div class="skill-content">
+              Bootstrap
+              </div>
+              <div class="skill-bar">
+                <div class="skill-value-boot"></div>
+              </div>
+              <span class="skill-per">80%</span>
             </div>
           </div>
-
-        </div>
-
       </div>
     </section>
 
@@ -670,7 +712,7 @@
                   <span>Copyright kwonjakka</span>
                 </div>
                 <div class="social">
-                  <a href="//www.instagram.com/p/CW5G9EkPBol/?utm_source=ig_web_copy_link target=" _blank""><i
+                  <a href="//www.instagram.com/p/CW5G9EkPBol/?utm_source=ig_web_copy_link" target="_blank"><i
                       class="bi bi-instagram"></i></a>
                 </div>
               </div>
@@ -686,7 +728,7 @@
                   <span>Copyright kwonjakka</span>
                 </div>
                 <div class="social">
-                  <a href="//www.instagram.com/p/CkIp3FHPotM/?utm_source=ig_web_copy_link target=" _blank""><i
+                  <a href="//www.instagram.com/p/CkIp3FHPotM/?utm_source=ig_web_copy_link" target="_blank"><i
                       class="bi bi-instagram"></i></a>
                 </div>
               </div>
@@ -801,7 +843,10 @@
     <div class="footer-top">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>kwonjakka</span></strong>. All Rights Reserved
+          &copy; Copyright 
+          <strong>
+            <span>kwonjakka</span>
+          </strong>. All Rights Reserved
         </div>
         <div class="credits">
           Designed by <a href="https://bootstrapmade.com/">minwoo kwon</a>
@@ -823,12 +868,12 @@
       </div>
     </div>
     <div class="instabtn d-flex align-items-center justify-content-center">
-      <a href="#" class="">
+      <a href="//instagram.com/kwon_jakka" target="_blank">
         <img src="./assets/img/instagram.png" alt="">
       </a>
     </div>
     <div class="kakaobtn d-flex align-items-center justify-content-center">
-      <a href="#" class="">
+      <a href="//open.kakao.com/o/s25PLJ7e" target="_blank">
         <img src="./assets/img/kakao.png" alt="">
       </a>
     </div>
