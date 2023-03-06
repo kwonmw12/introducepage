@@ -1097,7 +1097,7 @@ section {
 }
 
 .skill .skill-value-html{
-  width: 80%;
+  width: 90%;
   height: 2px;
   background-color: #e34c26;
 }
@@ -1106,28 +1106,16 @@ section {
   height: 2px;
   background-color: #e34c26;
 }
-.skill .skill-value-html{
-  width: 80%;
-  height: 2px;
-  background-color: #e34c26;
-}
 .skill .skill-value-js{
-  width: 50%;
+  width: 70%;
   height: 2px;
   background-color: #e34c26;
 }
 
 .skill .skill-value-figma{
-  width: 80%;
+  width: 90%;
   height: 2px;
   background-color: #e34c26;
-}
-
-.skill .skill-value-html{
-  width: 80%;
-  height: 2px;
-  background-color: #e34c26;
-  animation: progress;
 }
 
 .skill .skill-value-jq{
@@ -1151,7 +1139,7 @@ section {
   background-color: #e34c26;
 }
 .skill .skill-value-boot{
-  width: 80%;
+  width: 90%;
   height: 2px;
   background-color: #e34c26;
 }
@@ -1416,8 +1404,32 @@ section {
   background-color: #f1e05a;
   position: absolute;
 }
+.swiper-button-next:after,
+.swiper-button-prev:after{opacity: 0; font-size: 0}
 
+#cursor {position: fixed; z-index: 99; left: 0; top: 0; pointer-events: none; will-change: transform;}
+@media (hover: hover) and (pointer: fine) {
+	.cursor-circle {width: 20px; height: 20px; margin-top: -50%; margin-left: -50%; border: solid 1px rgba(227, 222, 193, 0.64);
+		-webkit-border-radius: 50%; border-radius: 50%;
+		transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+	#cursor::after{content: ''; position: absolute; top: 0; left: -1rem;}
+	#cursor[class*="arrow-"] .cursor-circle{width: 200px; height: 200px;}
+	#cursor[class*="arrow-"]::after{width: 48px; height: 48px; background-repeat: no-repeat; background-position: center; background-size: 48px auto;}
+	#cursor[class*="arrow-white"] .cursor-circle{border-color: #cda45e; color: #cda45e;}
+	#cursor[class*="arrow-white"]::before{position: absolute; top: -44px; left: -24px; width: 48px; color: white; text-align: center;}
+	#cursor[class*="arrow-white"]::after{top: 24px; background-image: url('//i.ibb.co/1nCzBWC/ic-line-arrow-right.png');}
+	#cursor.arrow-white-next::before{content:'Next';}
+	#cursor.arrow-white-prev::before{content:'Prev';}
+	#cursor.arrow-white-prev::after{-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1);}
+}
 
+#portfolio .swiper-button-next,
+#portfolio .swiper-button-prev{min-width: 48px; top: 0; width: 25%; height: 100%; background: transparent;}
 
 .portfolio .stack-html-mark i{
   color: #e34c26 !important;
@@ -1444,6 +1456,9 @@ section {
   }
   .portfolio .content {
     padding-left: none;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    display: none;
   }
 }
 
