@@ -40,7 +40,7 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY + 500
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
@@ -70,7 +70,7 @@
   }
 
   /**
-   * Toggle .header-scrolled class to #header when page is scrolled
+   * 상단바 스크롤시 위로 올라가기
    */
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
